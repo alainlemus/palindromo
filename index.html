@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    function palindromo(str){
+
+        let txt = str.replace(/ /g,'')
+
+        let textNormal = txt
+        let textReverso = txt.split('').reverse().join('')
+
+        console.log(textNormal, textReverso)
+
+        let array1 = textNormal.split('')
+        let array2 = textReverso.split('')
+
+        let flag = false
+
+        console.log(array1, array2)
+
+        array1.map(function(letra, index){
+
+            // console.log(letra, array2[index])
+
+            if(letra !== array2[index]){
+                return
+            }
+
+            flag = true
+
+        })
+
+        flag ? console.log('ES PALINDROMO') : console.log('NO ES PALINDROMO')
+        
+    }
+
+    palindromo('MEXICO')
+
+</script>
+</html>
